@@ -1,0 +1,153 @@
+header {
+  width: 100%;
+  font-size: 12px;
+  background: #fff;
+  height: 100px;
+}
+
+header .header-inner {
+  width: 92%;
+  margin: 40px auto;
+}
+
+header .header-inner .logo {
+  float: left;
+  transition: 0.3s;
+}
+
+header .header-inner .logo:hover {
+  opacity: 0.4;
+}
+
+header .header-inner .my-clip {
+  margin-left: 30%;
+  float: left;
+  transition: 0.3s;
+}
+
+header .header-inner .my-clip:hover {
+  opacity: 0.4;
+}
+
+header .header-inner .my-clip img {
+  width: 202px;
+  height: 70.3px;
+}
+
+header .header-inner .top-nav {
+  width: 31%;
+  float: right;
+}
+
+header .header-inner .top-nav p {
+  text-align: right;
+  margin-right: 8%;
+}
+
+header .header-inner .top-nav p a {
+  display: block;
+  font-weight: bold;
+  color: #000;
+}
+
+header .header-inner .top-nav li {
+  float: left;
+  display: block;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  text-align: right;
+}
+
+header .header-inner .top-nav li :nth-child(2) {
+  margin-right: 0;
+}
+
+header .header-inner .top-nav li a {
+  display: block;
+  color: #000;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+header .header-inner .top-nav li a:hover {
+  color: gray;
+}
+
+.top-vidual {
+  border-top: solid 1px #45A638;
+}
+
+.top-vidual .tVidual-inner-left {
+  float: left;
+  background: url("img/stripe.png") no-repeat;
+  background-size: contain;
+  width: 60%;
+  height: 760px;
+}
+
+.top-vidual .tVidual-inner-left .left-box {
+  width: 670px;
+  margin-top: 40px;
+  margin-left: auto;
+}
+
+.top-vidual .tVidual-inner-left .left-box dt {
+  float: left;
+  font-weight: bold;
+  color: #45A638;
+  font-size: 20px;
+}
+
+.top-vidual .tVidual-inner-left .left-box dd {
+  float: left;
+  font-weight: bold;
+  color: #45A638;
+  margin-left: 10px;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.top-vidual .tVidual-inner-left .left-box a {
+  color: #000;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.top-vidual .tVidual-inner-right {
+  float: right;
+  width: 40%;
+  height: 760px;
+  background: #fff;
+}
+
+.top-vidual .tVidual-inner-right .right-box {
+  margin-top: 40px;
+  width: 401px;
+}
+
+.top-vidual .tVidual-inner-right .right-box dt {
+  float: left;
+  font-weight: bold;
+  color: #45A638;
+  font-size: 20px;
+}
+
+.top-vidual .tVidual-inner-right .right-box dd {
+  float: left;
+  font-weight: bold;
+  color: #45A638;
+  margin-left: 10px;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.top-vidual .tVidual-inner-right .right-box h4 {
+  font-size: 14px;
+  margin-top: 20px;
+  color: #45A638;
+}
+
+.top-vidual .tVidual-inner-right .right-box p {
+  font-size: 14px;
+  margin-top: 20px;
+}

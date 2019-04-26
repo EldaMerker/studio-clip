@@ -1,0 +1,177 @@
+//scss練習
+//
+// @import "header";
+// @mixin commonSet{
+//   width:980px;
+//   margin: 0 auto;
+// }
+// @mixin hover{
+//   &:hover{
+//     background: #555;
+//     color:#111;
+//   }
+// }
+// @mixin paddingTop{
+//   padding-top: 80px;
+// }
+// @mixin vidual($height:980px,$width:100%,$background:#000){
+//   height: $height;
+//   width: $width;
+//   background: $background;
+// }
+// @mixin inner-viual($height:100%,$width:980px,$margin:0 auto){
+//   height: $height;
+//   width: $width;
+//   margin: $margin;
+// }
+// @mixin anchor($color:#444){
+//   a{
+//     color: #444;
+//     transition: 0.7s;
+//     @include txt-hover;
+//   }
+// }
+// @mixin txt-hover($color:#fff){
+//   &:hover{
+//     text-decoration: underline;
+//     color:$color;
+// }
+// }
+// $commonW: 980px;
+// $baseF : 16px;
+// $titleF: 64px;
+// $baseC: #fff;
+// $fontColor: #525252;
+//
+// header{
+//   @include headerSet;
+//   ul{
+//     @include commonSet;
+//     li{
+//       width:240px;
+//       font-size: $baseF;
+//       float: left;
+//       line-height: 60px;
+//       text-align: center;
+//       a{
+//         display: block;
+//         color: $baseC;
+//         text-decoration: none;
+//         transition: 0.7s;
+//         @include hover;
+//       }
+//     }
+//  }
+// }
+//
+//
+// .main-vidual {
+//   @include paddingTop;
+//   @include vidual(980px,100%,#888);
+//   .main-vidual-inner{
+//     @include inner-viual;
+//   h1 {
+//     text-align: center;
+//     font-weight: bold;
+//     font-size:$titleF;
+//     color:$baseC;
+//   }
+//   p{
+//     font-size:$baseF;
+//     color:$baseC;
+//     width:400px;
+//     padding-top: 20%;
+//     line-height: 1.7;
+//     // a{
+//     //   color: #444;
+//     //   transition: 0.7s;
+//     //   @include txt-hover;
+//     // }
+//     @include anchor;
+//   }
+//   }
+// }
+//
+//
+// @mixin subVidual($width:100%,$height:100%,$margin:0 auto){
+//   width:$width;
+//   height:$height;
+//   margin:$margin;
+//   background: #f0e68c;
+// }
+// .sub-vidual{
+//   width: 100%;
+//   height: 980px;
+//   background:#fff;
+//   text-align: center;
+//   //複数の引数が有るミックスインを読み込む際に可変長引数を使う
+//   $value:980px,500px;
+//   .sub-vidual-inner{
+//   @include subVidual($value...);
+//   @include paddingTop;
+//   h1 {
+//     color: $fontColor;
+//     font-size: $titleF;
+//     display: block;
+//   }
+//   p{
+//     width:400px;
+//     a{
+//       color:#fff;
+//       transition: 0.7s;
+//       @include txt-hover(#228b22);
+//     }
+//
+//   }
+//   }
+// }
+
+$baseFontSize:14px;
+$imgDir: "../img/";
+$brandColor:rgba(255,0,0,0.9);//lighten,darken [sass built-in functions]で色々な機能を見ることができる。
+
+#main {
+  width:90%;
+  background:url("#{$imgDir}img.png");//変数を途中で挿入する書き方。
+  p{
+    font-size:"#{12 + 12}px";//数値や文字列を計算させる書き方。
+    // color:$brandColor;
+    color: lighten($brandColor, 30%);
+    .sub{
+      font-size:$baseFontSize - 2px;//
+    }
+  }
+}
+
+
+//条件分岐　@if @else
+
+$debugMode: true;
+$x:30;
+
+#major{
+  @if $debugMode == true {
+    color:red;
+  }@else{
+    color:green;
+  }
+  p{
+    @if $x > 20{
+      color:yellow;
+    }
+  }
+}
+
+//ループ　
+//@for
+// @for $i from 10 through 14{
+//   .fs #{$i} {font-size:10px;}
+  //.fsクラスの番号を指定（10〜14）
+// }
+
+//@while
+$i:10;
+@while $i <= 14{
+  .fs#{$i}{font-size: #{$i}px;}
+  $i: $i + 1;
+}

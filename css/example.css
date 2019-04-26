@@ -1,0 +1,42 @@
+//sass変数使用例
+
+@charset "UTF-8";
+// font-size
+$fs-pc: 14;
+$fs-sp: 24;
+// color
+$base-color: #000;
+$white: #fff;
+$grey: #f0f0f0;
+$red: #ea1f23;
+$navy: #133362;
+$blue: #275395;
+$yellow: #d6ad3d;
+$brown: #766452;
+$beige: #766452;
+$pink: #d01c64;
+$link: $base-color;
+$text-link: $base-color;
+// dark color
+$dark-blue: #1c3976;
+$dark-pink: #e24a61;
+$dark-green: #0bd1ae;
+$dark-grey: #909090;
+// light color
+$light-black: #adadad;
+$light-grey: #e7e8ee;
+$light-green: #edf4f4;
+// img path
+$img-path: '../../assets/img/';
+// blank
+$tbbv: 80px;
+$sbv: 80px;
+$sp-tbbv: 60px;
+$sp-sbv: 20px;
+// width
+$width-l: 1600;
+$pc-w: 1280;
+$pc-w-s: 1000;
+$sp-w: 750;
+$sp-inner-w: 690;
+$sp-inner-w-s: 630;

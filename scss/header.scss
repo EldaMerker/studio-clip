@@ -1,0 +1,76 @@
+@mixin headerSet{
+  width: 100%;
+  font-size: 12px;
+  background: #fff;
+  height: 100px;
+
+}
+@mixin innerSet{
+  width:92%;
+  margin: 40px auto ;
+}
+
+@mixin logoSet{
+  float: left;
+  transition: 0.3s;
+  &:hover{
+    opacity: 0.4;
+  }
+}
+
+
+$acolor: #000;
+@mixin topNavSet{
+  width:31%;
+  float: right;
+  p{
+      text-align: right;
+      margin-right: 8%;
+     a{
+      display: block;
+      font-weight: bold;
+      color: #000;
+     }
+      }
+  li{
+    float: left;
+    display: block;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    text-align: right;
+    :nth-child(2){
+      margin-right: 0;
+    }
+    a{
+      display: block;
+      color:$acolor;
+      font-weight: bold;
+      transition: 0.3s;
+      &:hover{
+        color: lighten($acolor, 50%);
+      }
+    }
+  }
+}
+
+header{
+  @include headerSet;
+  .header-inner{
+    @include innerSet;
+    .logo{
+
+      @include logoSet;
+    }
+    .my-clip{
+      margin-left: 30%;
+      @include logoSet;
+      img{
+        width:202px;
+        height: 70.3px;
+      }
+    }
+    .top-nav{
+      @include topNavSet;
+    }
+  }
+}

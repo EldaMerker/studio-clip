@@ -1,0 +1,63 @@
+$commonColor:#45A638;
+$commonSize:14px;
+@mixin topVidual{
+  border-top: solid 1px $commonColor;
+}
+@mixin topTtl{
+
+  dt{
+    float: left;
+    font-weight: bold;
+    color: $commonColor;
+    font-size: 20px;
+  }
+  dd{
+    float: left;
+    font-weight: bold;
+    color: $commonColor;
+    margin-left: 10px;
+    margin-top: 5px;
+    font-size: 14px;
+  }
+}
+.top-vidual{
+  @include topVidual;
+  .tVidual-inner-left{
+    float: left;
+    background: url("img/stripe.png") no-repeat;
+    background-size: contain;
+    width:60%;
+    height:760px;
+    .left-box{
+    width:670px;
+    margin-top:40px;
+    margin-left: auto;
+   @include topTtl;
+   a{
+     color:#000;
+     font-size: 14px;
+     margin-top: 20px;
+   }
+   }
+  }
+  .tVidual-inner-right{
+    float: right;
+    width:40%;
+    height:760px;
+    background:#fff;
+    .right-box{
+      margin-top:40px;
+      width:401px;
+     @include topTtl;
+     h4{
+       font-size: $commonSize;
+       margin-top: 20px;
+       color: $commonColor;
+     }
+     p{
+       font-size: $commonSize;
+       margin-top: 20px;
+     }
+  }
+ }
+}
