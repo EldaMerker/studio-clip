@@ -1,10 +1,10 @@
 $commonColor:#45A638;
 $commonSize:14px;
-@mixin topVidual{
+
+@mixin Vidual{
   border-top: solid 1px $commonColor;
 }
 @mixin topTtl{
-
   dt{
     float: left;
     font-weight: bold;
@@ -19,15 +19,22 @@ $commonSize:14px;
     margin-top: 5px;
     font-size: 14px;
   }
-}
+ }
+
+ @mixin innerPartsL{
+     float: left;
+ }
+
+
 .top-vidual{
-  @include topVidual;
+  @include Vidual;
+  height:630px;
+  position: relative;//スクロールボタン用
   .tVidual-inner-left{
     float: left;
     background: url("img/stripe.png") no-repeat;
     background-size: contain;
     width:60%;
-    height:760px;
     .left-box{
     width:670px;
     margin-top:40px;
@@ -37,16 +44,21 @@ $commonSize:14px;
      color:#000;
      font-size: 14px;
      margin-top: 20px;
+     transition: 0.3s;
+     &:hover{
+       color:lighten(#000, 30%);
+    }
    }
-   }
-  }
+ }//left-box-ends
+}//tVidual-inner-left-ends
+
   .tVidual-inner-right{
     float: right;
     width:40%;
-    height:760px;
     background:#fff;
     .right-box{
       margin-top:40px;
+      margin-left: 20px;
       width:401px;
      @include topTtl;
      h4{
@@ -58,6 +70,32 @@ $commonSize:14px;
        font-size: $commonSize;
        margin-top: 20px;
      }
+     a{
+       color:#000;
+       text-align: right;
+       font-size: 14px;
+       margin-top: 40px;
+       transition: 0.3s;
+       &:hover{
+         color:lighten(#000, 30%);
+     }
+    }
+
+  }//right-box-ends
+ }//tVidual-inner-right-ends
+}//top-vidual-ends
+
+.main-vidual{
+  @include Vidual;
+  height: 760px;
+  background: #666;
+  .mVidual-inner-left{
+    float: left;
+    width:50%;
+    .left-box{
+    width:670px;
+    margin-top:40px;
+    margin-left: auto;
   }
- }
+}
 }
