@@ -75,6 +75,7 @@ header .header-inner .top-nav li a:hover {
 
 .top-vidual {
   border-top: solid 1px #45A638;
+  height: 630px;
 }
 
 .top-vidual .tVidual-inner-left {
@@ -82,7 +83,6 @@ header .header-inner .top-nav li a:hover {
   background: url("img/stripe.png") no-repeat;
   background-size: contain;
   width: 60%;
-  height: 760px;
 }
 
 .top-vidual .tVidual-inner-left .left-box {
@@ -111,17 +111,22 @@ header .header-inner .top-nav li a:hover {
   color: #000;
   font-size: 14px;
   margin-top: 20px;
+  transition: 0.3s;
+}
+
+.top-vidual .tVidual-inner-left .left-box a:hover {
+  color: #4d4d4d;
 }
 
 .top-vidual .tVidual-inner-right {
   float: right;
   width: 40%;
-  height: 760px;
   background: #fff;
 }
 
 .top-vidual .tVidual-inner-right .right-box {
   margin-top: 40px;
+  margin-left: 20px;
   width: 401px;
 }
 
@@ -150,4 +155,33 @@ header .header-inner .top-nav li a:hover {
 .top-vidual .tVidual-inner-right .right-box p {
   font-size: 14px;
   margin-top: 20px;
+}
+
+.top-vidual .tVidual-inner-right .right-box a {
+  color: #000;
+  text-align: right;
+  font-size: 14px;
+  margin-top: 40px;
+  transition: 0.3s;
+}
+
+.top-vidual .tVidual-inner-right .right-box a:hover {
+  color: #4d4d4d;
+}
+
+.main-vidual {
+  border-top: solid 1px #45A638;
+  height: 760px;
+  background: #666;
+}
+
+.main-vidual .mVidual-inner-left {
+  float: left;
+  width: 50%;
+}
+
+.main-vidual .mVidual-inner-left .left-box {
+  width: 670px;
+  margin-top: 40px;
+  margin-left: auto;
 }
